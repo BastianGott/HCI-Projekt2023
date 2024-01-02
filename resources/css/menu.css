@@ -1,0 +1,49 @@
+*{
+    margin: 0;
+    padding: 0;
+    height: 100%
+
+}
+
+.Datum{
+    position: absolute;
+    background-color: black;
+    height: 20%;
+    width: 50%;
+    left: 7%;
+    top: 2.5%;
+}
+
+.Sprache{
+    position: absolute;
+    background-color: blue;
+    height: 9%;
+    width: 30%;
+    left: 65%;
+    top: 2.5%;
+}
+
+.Preis{
+    position: absolute;
+    background-color: yellow;
+    height: 9%;
+    width: 30%;
+    left: 65%;
+    top: 13.5%;
+}
+
+.Essen1{
+    position: absolute;
+    background-color: brown;
+    height: 33.75%;
+    width: 100%;
+    top: 25%;
+}
+
+.Essen2{
+    position: absolute;
+    background-color: brown;
+    height: 33.75%;
+    width: 100%;
+    top: 63.75%;
+}
