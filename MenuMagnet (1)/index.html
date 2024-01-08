@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>HCI-Gruppenprojekt</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- Seite: Intro für Studentin mit Acc -->
+  <div id="intro">
+    <div class="bg-img">
+      <button id="next-button">Zum Speiseplan</button>
+      <div class="welcome">
+        <span class="caption">Willkommen, Julia Müller!</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Seite: Menü -->
+  <div id="menu" style="display:none;">
+
+    <button id="logout-button">Logout</button>
+    <div id="obereBox">
+
+      <!--alter
+      <button id="gerichteFiltern-button">Gerichte filtern</button> 
+      Code-->
+      <!--neuer Code-->
+      <button id="gerichteFiltern-button">Gerichte Filter</button>
+
+      <div id="gerichte-popup" class="popup" style="display:none;">
+        <div id="close-button" onclick="closeGerichte()">X</div>
+        <div class="checkbox-list">
+          <label><input type="checkbox" id="option1"> Fleisch</label>
+          <label><input type="checkbox" id="option2"> Fisch</label>
+          <label><input type="checkbox" id="option3"> Gemüse</label>
+          <label><input type="checkbox" id="option3"> Nüsse</label>
+          <label><input type="checkbox" id="option3"> Milchprodukte</label>
+          <!-- Weitere Checkboxen können hier hinzugefügt werden -->
+        </div>
+
+
+        </select>
+      </div>
+
+
+      <!--neuer Code-->
+      <div id="Container">
+        <span><u>Speiseplan:</u></span><br>
+        <span>Montag, 18.12.2023</span>
+      </div>
+      <button id="datumAendern-button">Datum ändern</button>
+      <div id="datumAendern-popup" class="popup" style="display:none;">
+        <div id="close-button" onclick="closedatumAendern()">X</div>
+        <div class="date-picker" id="date-picker">
+          <input type="date" id="new-date">
+          <button onclick="changeDate()">Datum festlegen</button>
+        </div>
+      </div>
+    </div>
+
+    <div id="mittlereBox">
+      <!-- Hier Container mit Darstellung der Speisen -->
+      <button type="button" class="left-arrow" id="left-arrow">
+      </button>
+      <ul id="list" class="Menues">
+        <li class="menu1" id="menu1">
+          <div class="menupoint">
+            <header>Menu1</header>
+            <button id="mapbuttonB" class="MapButton">B</button>
+          </div>
+          <div class="imageEssen">image</div>
+          <div class="preis">Preis</div>
+          <div class="infos"><button id="info-button1" class="infobutton">Weitere Informationen</button></div>
+        </li>
+        <li>
+          <div class="menupoint">
+            <header>Menu2</header>
+            <button id="mapbuttonBa" class="MapButton">B</button>
+          </div>
+          <div class="imageEssen">image</div>
+          <div class="preis">Preis</div>
+          <div class="infos"><button id="info-button2" class="infobutton">Weitere Informationen</button></div>
+        </li>
+        <li>
+          <div class="menupoint">
+            <header>Menu3</header>
+            <button id="mapbuttonA" class="MapButton">A</button>
+          </div>
+          <div class="imageEssen">image</div>
+          <div class="preis">Preis</div>
+          <div class="infos"><button id="info-button3" class="infobutton">Weitere Informationen</button></div>
+        </li>
+        <li>
+          <div class="menupoint">
+            <header>Menu4</header>
+            <button id="mapbuttonC" class="MapButton">C</button>
+          </div>
+          <div class="imageEssen">image</div>
+          <div class="preis">Preis</div>
+          <div class="infos"><button id="info-button4" class="infobutton">Weitere Informationen</button></div>
+        </li>
+      </ul>
+      <button type="button" class="right-arrow" id="right-arrow">></button>
+    </div>
+
+
+    <div id="untereBox">
+      <div>Verbleibende Zeit: [Counter]</div>
+      <div>Julia Müller</div>
+      <button id="einstellungen-button">Einstellungen</button>
+    </div>
+  </div>
+
+  <!-- Pop-Up für Einstellungen -->
+  <div id="settings-popup" class="popup" style="display:none;">
+    <div id="close-button" onclick="closeSettings()">X</div>
+    <label for="language">Sprache:</label>
+    <select id="language">
+      <option value="de">Deutsch</option>
+      <option value="en">English</option>
+      <option value="pic">Bilder</option>
+    </select>
+    <label for="favorite-dishes">Bevorzugte Gerichte:</label>
+    <select id="favorite-dishes">
+      <option value="pizza">Fleisch & Meer</option>
+      <option value="pasta">Pasta</option>
+      <option value="salad">Vegetarisch</option>
+    </select>
+  </div>
+
+  <!-- Pop-Up für Informationen -->
+  <div id="informations-popup" class="popup" style="display:none;">
+    <div id="close-button" onclick="closeSettings()">X</div>
+    <div class="info-list">
+      <div class="info-column">
+        <h4 class="left-heading">Angaben zu Nährwerten:</h4>
+        <ul class="left-list">
+          <li>Protein: 20g</li>
+          <li>Fett: 15g</li>
+          <li>Kohlenhydrate: 30g</li>
+        </ul>
+      </div>
+      <div class="info-column">
+        <h4 class="right-heading">Enthält:</h4>
+        <ul class="right-list">
+          <li>Gluten</li>
+          <li>Laktose</li>
+          <li>Nüsse</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Pop-Up für KarteA -->
+  <div id="mapA-popup" class="popup" style="display:none;">
+    <div id="close-button" onclick="closeMapA()">X</div>
+    <div class="mapA-image"></div>
+  </div>
+
+
+  <!-- Pop-Up für KarteB -->
+  <div id="mapB-popup" class="popup" style="display:none;">
+    <div id="close-button" onclick="closeMapB()">X</div>
+    <div class="mapB-image"></div>
+  </div>
+
+
+  <!-- Pop-Up für KarteC -->
+  <div id="mapC-popup" class="popup" style="display:none;">
+    <div id="close-button" onclick="closeMapC()">X</div>
+    <div class="mapC-image"></div>
+  </div>
+
+  <script src="script.js"></script>
+
+</body>
+
+</html>
