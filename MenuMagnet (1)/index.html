@@ -8,6 +8,7 @@
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
 </head>
 
 <body>
@@ -25,14 +26,17 @@
   <!-- Seite: Menü -->
   <div id="menu" style="display:none;">
 
-    <button id="logout-button">Logout</button>
+    <button id="logout-button">
+      Logout
+      <i class="fas fa-door-open"></i>
+    </button>
     <div id="obereBox">
 
-      <!--alter
-      <button id="gerichteFiltern-button">Gerichte filtern</button> 
-      Code-->
       <!--neuer Code-->
-      <button id="gerichteFiltern-button">Gerichte Filter</button>
+      <button id="gerichteFiltern-button">
+        Gerichte filtern
+        <i class="fas fa-sliders-h"></i>
+      </button>
 
       <div id="gerichte-popup" class="popup" style="display:none;">
         <div id="close-button" onclick="closeGerichte()">X</div>
@@ -55,7 +59,10 @@
         <span><u>Speiseplan:</u></span><br>
         <span>Montag, 18.12.2023</span>
       </div>
-      <button id="datumAendern-button">Datum ändern</button>
+      <button id="datumAendern-button">
+        Datum ändern
+        <i class="fa fa-calendar" aria-hidden="true"></i>
+      </button>
       <div id="datumAendern-popup" class="popup" style="display:none;">
         <div id="close-button" onclick="closedatumAendern()">X</div>
         <div class="date-picker" id="date-picker">
@@ -67,43 +74,67 @@
 
     <div id="mittlereBox">
       <!-- Hier Container mit Darstellung der Speisen -->
-      <button type="button" class="left-arrow" id="left-arrow"><</button>
+      <button type="button" class="left-arrow" id="left-arrow">
+      </button>
       <ul id="list" class="Menues">
         <li class="menu1" id="menu1">
           <div class="menupoint">
-            <header>Menu1</header>
-            <button id="mapbuttonB" class="MapButton">B</button>
+            <header>Menu1 (Bevorzugt)</header>
+            <button id="mapbuttonB" class="MapButton">
+              B
+              <!--<img src="karte.png" width="25px" height="15px"> -->
+              <i class="fas fa-map"></i>
+            </button>
           </div>
           <div class="imageEssen">image</div>
           <div class="preis">Preis</div>
-          <div class="infos"><button id="info-button1" class="infobutton">Weitere Informationen</button></div>
+          <div class="infos"><button id="info-button1" class="infobutton">
+              Weitere Informationen
+              <i class="fas fa-info-circle"></i>
+            </button></div>
         </li>
         <li>
           <div class="menupoint">
-            <header>Menu2</header>
-            <button id="mapbuttonBa" class="MapButton">B</button>
+            <header>Menu2 (Bevorzugt)</header>
+            <button id="mapbuttonBa" class="MapButton">
+              B
+              <i class="fas fa-map"></i>
+            </button>
           </div>
           <div class="imageEssen">image</div>
           <div class="preis">Preis</div>
-          <div class="infos"><button id="info-button2" class="infobutton">Weitere Informationen</button></div>
+          <div class="infos">
+            <button id="info-button2" class="infobutton">
+              Weitere Informationen
+              <i class="fas fa-info-circle"></i>
+          </div>
         </li>
         <li>
           <div class="menupoint">
             <header>Menu3</header>
-            <button id="mapbuttonA" class="MapButton">A</button>
+            <button id="mapbuttonA" class="MapButton">
+              A
+              <i class="fas fa-map"></i>
+            </button>
           </div>
           <div class="imageEssen">image</div>
           <div class="preis">Preis</div>
-          <div class="infos"><button id="info-button3" class="infobutton">Weitere Informationen</button></div>
+          <div class="infos"><button id="info-button3" class="infobutton">
+              Weitere Informationen
+              <i class="fas fa-info-circle"></i>
         </li>
         <li>
           <div class="menupoint">
             <header>Menu4</header>
-            <button id="mapbuttonC" class="MapButton">C</button>
+            <button id="mapbuttonC" class="MapButton">
+              C
+              <i class="fas fa-map"></i>
+            </button>
           </div>
           <div class="imageEssen">image</div>
           <div class="preis">Preis</div>
-          <div class="infos"><button id="info-button4" class="infobutton">Weitere Informationen</button></div>
+          <div class="infos"><button id="info-button4" class="infobutton">Weitere Informationen<img
+                src="information.jpg" width="20px" height="10px"></button></div>
         </li>
       </ul>
       <button type="button" class="right-arrow" id="right-arrow">></button>
@@ -113,7 +144,8 @@
     <div id="untereBox">
       <div>Verbleibende Zeit: [Counter]</div>
       <div>Julia Müller</div>
-      <button id="einstellungen-button">Einstellungen</button>
+      <button id="einstellungen-button">Einstellungen<i class="fas fa-cog"></i>
+      </button>
     </div>
   </div>
 
