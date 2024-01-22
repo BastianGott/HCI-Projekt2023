@@ -26,13 +26,9 @@
   <!-- Seite: Menü -->
   <div id="menu" style="display:none;">
 
-    <button id="logout-button">
-      Logout
-      <i class="fas fa-door-open"></i>
-    </button>
+    <!-- Obere Box -->
+    <button id="logout-button">Logout <i class="fas fa-door-open"></i></button>
     <div id="obereBox">
-
-      <!--neuer Code-->
       <button id="gerichteFiltern-button">
         Gerichte filtern
         <i class="fas fa-sliders-h"></i>
@@ -46,17 +42,13 @@
           <label><input type="checkbox" id="option3"> Gemüse</label>
           <label><input type="checkbox" id="option3"> Nüsse</label>
           <label><input type="checkbox" id="option3"> Milchprodukte</label>
-          <!-- Weitere Checkboxen können hier hinzugefügt werden -->
+
+          <button id="Filter-bestätigen" onclick="closeGerichte()">Bestätigen</button>
         </div>
-
-
-        </select>
       </div>
 
-
-      <!--neuer Code-->
       <div id="Container">
-        <span><u>Speiseplan:</u></span><br>
+        <span><u>Speiseplan:</u>&nbsp;&nbsp;</span><br>
         <span>Montag, 18.12.2023</span>
       </div>
       <button id="datumAendern-button">
@@ -75,77 +67,86 @@
     <div id="mittlereBox">
       <!-- Hier Container mit Darstellung der Speisen -->
       <button type="button" class="left-arrow" id="left-arrow">
-      </button>
-      <ul id="list" class="Menues">
-        <li class="menu1" id="menu1">
-          <div class="menupoint">
-            <header>Menu1 (Bevorzugt)</header>
-            <button id="mapbuttonB" class="MapButton">
-              B
-              <!--<img src="karte.png" width="25px" height="15px"> -->
-              <i class="fas fa-map"></i>
-            </button>
-          </div>
-          <div class="imageEssen">image</div>
-          <div class="preis">Preis</div>
-          <div class="infos"><button id="info-button1" class="infobutton">
-              Weitere Informationen
-              <i class="fas fa-info-circle"></i>
-            </button></div>
-        </li>
-        <li>
-          <div class="menupoint">
-            <header>Menu2 (Bevorzugt)</header>
-            <button id="mapbuttonBa" class="MapButton">
-              B
-              <i class="fas fa-map"></i>
-            </button>
-          </div>
-          <div class="imageEssen">image</div>
-          <div class="preis">Preis</div>
-          <div class="infos">
-            <button id="info-button2" class="infobutton">
-              Weitere Informationen
-              <i class="fas fa-info-circle"></i>
-          </div>
-        </li>
-        <li>
-          <div class="menupoint">
-            <header>Menu3</header>
-            <button id="mapbuttonA" class="MapButton">
-              A
-              <i class="fas fa-map"></i>
-            </button>
-          </div>
-          <div class="imageEssen">image</div>
-          <div class="preis">Preis</div>
-          <div class="infos"><button id="info-button3" class="infobutton">
-              Weitere Informationen
-              <i class="fas fa-info-circle"></i>
-        </li>
-        <li>
-          <div class="menupoint">
-            <header>Menu4</header>
-            <button id="mapbuttonC" class="MapButton">
-              C
-              <i class="fas fa-map"></i>
-            </button>
-          </div>
-          <div class="imageEssen">image</div>
-          <div class="preis">Preis</div>
-          <div class="infos"><button id="info-button4" class="infobutton">Weitere Informationen<img
-                src="information.jpg" width="20px" height="10px"></button></div>
-        </li>
-      </ul>
-      <button type="button" class="right-arrow" id="right-arrow">></button>
-    </div>
+        < </button>
+          <ul id="list" class="menu">
+            <li>
+              <div class="menupoint">
+                <header class="meal-name">Putensteak, fruchtige Currysauce, Fingermöhren, Risolée-Kartoffeln</header>
+              </div>
+              <div class="meal-img"><img src="img/menu/g1.png" alt="image"></div>
+              <div class="preis">3,20€</div>
+              <div class="infos">
+                <button class="infobutton">
+                  Weitere Informationen
+                </button>&nbsp;&nbsp;
+                <button id="mapbuttonB" class="MapButton">
+                  B
+                  <img src="karte.png" style="max-height: 3vh;">
+                </button>
+              </div>
+            </li>
+            <li>
+              <div class="menupoint">
+                <header class="meal-name">Mini-Frühlingsrollen, Sweet-Chilisauce, Asiatisches Gemüse, Basmatireis
+                </header>
+
+              </div>
+              <div class="meal-img"><img src="img/menu/g2.png" alt="image"></div>
+              <div class="preis">3€</div>
+              <div class="infos">
+                <button id="info-button2" class="infobutton">
+                  Weitere Informationen
+                </button>&nbsp;&nbsp;
+                <button id="mapbuttonBa" class="MapButton">
+                  B
+                  <img src="karte.png" style="max-height: 3vh;">
+                </button>
+              </div>
+            </li>
+            <li>
+              <div class="menupoint">
+                <header class="meal-name">Hausgemachte Pasta, Pflanzliche Bolognese</header>
+
+              </div>
+              <div class="meal-img"><img src="img/menu/g3.png" alt="image"></div>
+              <div class="preis">1,60€</div>
+              <div class="infos">
+                <button id="info-button3" class="infobutton">
+                  Weitere Informationen
+                  <!-- <i class="fas fa-info-circle"></i> -->
+                </button>&nbsp;&nbsp;
+                <button id="mapbuttonA" class="MapButton">
+                  A
+                  <img src="karte.png" style="max-height: 3vh;">
+                </button>
+            </li>
+            <li>
+              <div class="menupoint">
+                <header class="meal-name">Schlemmerjoghurt mit frischem Obst</header>
+              </div>
+              <div class="meal-img"><img src="img/menu/g4.png" alt="image"></div>
+              <div class="preis">0,80€</div>
+              <div class="infos">
+                <button id="info-button4" class="infobutton">Weitere Informationen
+
+                </button>&nbsp;&nbsp;
+                <button id="mapbuttonC" class="MapButton">
+                  C
+                  <img src="karte.png" style="max-height: 3vh;">
+                </button>
+              </div>
+            </li>
+
+
+          </ul>
+          <button type="button" class="right-arrow" id="right-arrow">></button>
+    </div> <!-- Ende mittlereBox -->
 
 
     <div id="untereBox">
       <div>Verbleibende Zeit: [Counter]</div>
       <div>Julia Müller</div>
-      <button id="einstellungen-button">Einstellungen<i class="fas fa-cog"></i>
-      </button>
+      <button id="einstellungen-button">Einstellungen<i class="fas fa-cog"></i></button>
     </div>
   </div>
 
@@ -207,6 +208,16 @@
   <div id="mapC-popup" class="popup" style="display:none;">
     <div id="close-button" onclick="closeMapC()">X</div>
     <div class="mapC-image"></div>
+  </div>
+
+  <!-- Pop-Up für Logout -->
+  <div id="logout-popup" class="popup" style="display:none;">
+    <div id="close-button" onclick="closelogout()">X</div>
+    <div class="logout-text">Sie werden ausgeloggt.<br /> Möchten Sie fortfahren?</div>
+    <div class "logout-subbuttons">
+      <button id="logout-subbuttonJa" class="button" onclick="backToIntro()">Ja</button>
+      <button id="logout-subbuttonNein" class="button" onclick="closelogout()">Nein</button>
+    </div>
   </div>
 
   <script src="script.js"></script>
