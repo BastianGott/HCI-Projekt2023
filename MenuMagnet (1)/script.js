@@ -15,7 +15,7 @@ let currentMenuIndex = 0;
 const totalMenusToShow = 3;
 
 function showMenus() {
-  const menus = document.querySelectorAll('.Menues li');
+  const menus = document.querySelectorAll('.menu li');
 
   for (let i = 0; i < menus.length; i++) {
     if (i >= currentMenuIndex && i < currentMenuIndex + totalMenusToShow) {
@@ -25,7 +25,6 @@ function showMenus() {
     }
   }
 }
-
 
 /* popup Karte */
 
@@ -56,6 +55,7 @@ function closeMapC() {
 
 
 /* Code für mittlere Box */
+
 leftButton.addEventListener('click', () => {
   if (currentMenuIndex > 0) {
     currentMenuIndex -= 1;
@@ -64,12 +64,13 @@ leftButton.addEventListener('click', () => {
 });
 
 rightButton.addEventListener('click', () => {
-  const menus = document.querySelectorAll('.Menues li');
+  const menus = document.querySelectorAll('.menu li');
   if (currentMenuIndex + totalMenusToShow < menus.length) {
     currentMenuIndex += 1;
     showMenus();
   }
 });
+
 
 /* Code für untere Box */
 document.getElementById("einstellungen-button").addEventListener("click", openSettings);
@@ -113,4 +114,23 @@ function opendatumAendern() {
 
 function closedatumAendern() {
   document.getElementById("datumAendern-popup").style.display = "none";
+}
+
+/* Code für LogOut */
+
+document.getElementById("logout-button").addEventListener("click", openlogout);
+document.getElementById("logout-subbuttonJa").addEventListener("click", backToIntro);
+
+function openlogout() {
+  document.getElementById("logout-popup").style.display = "flex";
+}
+
+function closelogout() {
+  document.getElementById("logout-popup").style.display = "none";
+}
+
+function backToIntro(){
+  document.getElementById("menu").style.display = "none";
+  document.getElementById("logout-popup").style.display = "none";
+  introPage.style.display = 'block';
 }
